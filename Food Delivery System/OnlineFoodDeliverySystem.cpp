@@ -3,7 +3,7 @@
 OnlineFoodDeliverySystem* OnlineFoodDeliverySystem::instance = nullptr;
 
 OnlineFoodDeliverySystem* OnlineFoodDeliverySystem::getInstance(){
-    //Singleton Design Pattern Implementation
+    //Singleton Design Pattern 
     if(instance == nullptr){
         instance = new OnlineFoodDeliverySystem();
     }
