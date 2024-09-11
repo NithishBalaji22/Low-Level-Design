@@ -1,8 +1,5 @@
 #include "ATM.hpp"
 
-// bool depositCash(string accountNumber, double amount);
-// string generateTransactionId();
-
 bool ATM::authenticateCard(Card* card){
     string pin;
     cout<<"Please Enter your PIN: ";
@@ -27,8 +24,6 @@ bool ATM::withdrawalCash(string accountNumber, double amount){
     Account* account = bankingSystem->getAccount(accountNumber);
     if(account != nullptr){
         Transaction* newTransaction = new WithdrawalTransaction(generateTransactionId(), account, amount);
-        //From bankingService only you are processing the transaction 
-        //newTransaction->execute();
         bankingSystem->processTransaction(newTransaction);
         dispenser->disPenseCash(amount);
         return true;
@@ -42,8 +37,6 @@ bool ATM::depositCash(string accountNumber, double amount){
     Account* account = bankingSystem->getAccount(accountNumber);
     if(account != nullptr){
         Transaction* newTransaction = new DepositTransaction(generateTransactionId(), account, amount);
-        //From bankingService only you are processing the transaction 
-        //newTransaction->execute();
         bankingSystem->processTransaction(newTransaction);
         return true;
     }
