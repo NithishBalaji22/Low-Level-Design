@@ -45,33 +45,6 @@ void Store::makePurchase(Customer* customer, string itemName, int quantity){
     }
 }
 
-// void Store::makeBulkPurchase(Customer* customer, vector<pair<Item*, int>> bulkPurchase){
-//     int totalAmount= 0;
-//     vector<Item*> items;
-//     for(auto it : bulkPurchase){
-//         Item* item = it.first;
-//         int quantity = it.second;
-//         totalAmount += item->getSellingPrice() * quantity;
-//         items.emplace_back(item);
-//     }
-
-//     bool payment = transaction(customer, totalAmount);
-//     if(payment){
-//         Sales* sale = new Sales(customer, {items}, totalAmount);
-//         sales.insert({sale->getId(), sale});
-//         for(auto it : bulkPurchase){
-//             Item* item = it.first;
-//             int quantity = it.second;
-//             item->decrementQuantity(quantity);
-//             item->incrementProfit();
-//             return;
-//         }
-//         customer->addSales(sale);
-//     }
-
-//     cout<<"Insufficient Funds in your account"<<'\n';    
-// }
-
 void Store::makeBulkPurchase(Customer* customer, vector<pair<Item*, int>> bulkPurchase) {
     int totalAmount= 0;
     vector<Item*> items;
