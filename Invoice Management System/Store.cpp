@@ -57,15 +57,15 @@ void Store::makeBulkPurchase(Customer* customer, vector<pair<Item*, int>> bulkPu
 
     bool payment = transaction(customer, totalAmount);
     if(payment){
-        Sales* sale = new Sales(customer, items, totalAmount); // Fixed the constructor call
+        Sales* sale = new Sales(customer, items, totalAmount); 
         sales.insert({sale->getId(), sale});
         for(auto it : bulkPurchase){
             Item* item = it.first;
             int quantity = it.second;
             item->decrementQuantity(quantity);
-            item->incrementProfit(quantity); // Fixed profit calculation
+            item->incrementProfit(quantity); 
         }
-        customer->addSales(sale); // Moved outside the loop
+        customer->addSales(sale); 
     } else {
         cout<<"Insufficient Funds in your account"<<'\n';    
     }
