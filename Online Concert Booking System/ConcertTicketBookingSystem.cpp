@@ -36,16 +36,6 @@ void ConcertTicketBookingSystem::bookTicket(User* user, Concert* concert, vector
     cout<<"Insufficient Funds!"<<'\n';
 }
 
-// void ConcertTicketBookingSystem::cancelTicket(string bookingId){
-//     Booking* booking = bookings.at(bookingId);
-//     if(booking != nullptr){
-//         User* user = booking->getUser();
-//         Concert* concert = booking->getConcert();
-//         vector<Seat*> seats = booking->getUserSeats();
-//         concert->markSeatsAsAvailable(seats);
-//     }
-// }
-
 void ConcertTicketBookingSystem::cancelTicket(string bookingId){
     auto it = bookings.find(bookingId);
     if (it != bookings.end()) {
