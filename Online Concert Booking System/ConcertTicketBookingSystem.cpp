@@ -50,8 +50,6 @@ void ConcertTicketBookingSystem::cancelTicket(string bookingId){
     }
 }
 
-
-
 bool ConcertTicketBookingSystem::processPayment(User* user, double amount){
     double balance = user->getBalance();
     if(balance - amount >= 0){
