@@ -10,11 +10,6 @@ AssetManagementSystem* AssetManagementSystem::getInstance(){
     return instance;
 }
 
-
-//         int amountSpendForaSoftware(string softwareName);
-//         int amountSpentForVendor(string vendorName);
-//         int noOfInstalledSoftwareFromVendor(string vendorName);
-
 void AssetManagementSystem::registerEmployee(Employee* employee){
     employees[employee->getId()] = employee;
 }
@@ -96,8 +91,6 @@ void AssetManagementSystem::devicesWithExpiredSoftware(const string& currentDate
         }
     }
 }
-
-
 
 void AssetManagementSystem::amountSpentForVendor(string vendorName){
     auto it = vendors.find(vendorName);
