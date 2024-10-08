@@ -90,7 +90,6 @@ class LFUCache{
         }
 
         void put(int key, int value){
-            //Forget to add
             if(maxCacheSize == 0){
                 cout<<"As the Cache Size is 0 we cannot add the Node"<<'\n';
                 return;
