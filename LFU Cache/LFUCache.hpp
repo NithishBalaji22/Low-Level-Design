@@ -65,7 +65,6 @@ class LFUCache{
         void updateFreqList(Node* node){
             keyNode.erase(node->key);
             freqMapList[node->cnt]->remove(node);
-            //Forgot to add
             if(node->cnt == minFreq && freqMapList[node->cnt]->size == 0){
                 minFreq++;
             }
@@ -76,8 +75,6 @@ class LFUCache{
             }
 
             node->cnt += 1;
-            //Minor Changes you should be adding to the newHigherFreq
-            //freqMapList[node->cnt]->addFront(node);
             newHigherFreq->addFront(node);
             keyNode[node->key] = node;
             freqMapList[node->cnt] = newHigherFreq;
