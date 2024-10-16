@@ -1,0 +1,7 @@
+Five different types for creating threads.
+1. Function Pointer -- this is the very basic form of creating threads.
+2. Lambda Function
+3. Functor (Function Object)
+4. Non-static member function
+5. Static member function
+
