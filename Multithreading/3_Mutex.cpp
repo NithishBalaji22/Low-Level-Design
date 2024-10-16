@@ -15,6 +15,8 @@
 //Expectations: As the two threads got created the expected out is 2 right but heres where the race condition kicks in and outputs 1 rather 2
 // this is because both get executed parallely so both at a time change myAmount as 1
 
+// Mutex should be common between the threads to have synchronization
+
 #include <iostream>
 #include <thread>
 #include <mutex>
