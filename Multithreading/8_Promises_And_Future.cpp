@@ -5,8 +5,8 @@
 using namespace std;
 typedef unsigned long long ull;
 
-// The thread got created and its doing something in a finction and it save some result of that function in the that functions local variable
-// and if i want to access that functions local variable in my main function then i would use the concept of promises and future
+The thread got created and its doing something in a finction and it save some result of that function in the that functions local variable
+and if i want to access that functions local variable in my main function then i would use the concept of promises and future
 
 void findOdd(promise<ull> &&oddSumPromise, ull start, ull end){
     ull oddSum = 0;
