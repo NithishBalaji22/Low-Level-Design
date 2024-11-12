@@ -1,6 +1,6 @@
 // TOPIC : mutex::try_lock() On mutex In C++ Threading 
 
-/*
+
     0. try_lock() tries to lock the mutex clearly understand it only tries. On successfull lock acquisition it returns true meaning that lock has been acquired, In case
 if the lock is acquired by the other thread then it returns immediately. 
 
@@ -15,9 +15,9 @@ if the lock is acquired by the other thread then it returns immediately.
     Its a dead lock situation with undefined behavior. (if you want to able to lock the same mutex by the same thread
     more than one time then go for recursive_lock)    
 
-*/ 
 
-/*
+
+
     ChatGPT Doubts:
         Q) Cosider t1 got the try_lock () alright and t2 wont get the lock right so the for loop keep on iterating even if t2 didn't get lock?
                 Yes, exactly! If t2 does not acquire the lock on any given iteration due to t1 holding it, t2 will simply skip the increment for that particular iteration. 
@@ -45,7 +45,7 @@ if the lock is acquired by the other thread then it returns immediately.
                     BECAUSE OF THIS REASON WE ARE NOT GETTING 200000 AS THE LOCK ACQUIRES IS INSIDE THE FOR LOOP SO IF IT DIDNT GET THE THREAD WILL KEEP ON ITERATING 
                 UNTILL IT THE LOCK SO THE ITERATION IS GETTING WASTED
 
-*/
+
 
 // Member Function of Mutex Class is try_lock()
 #include <iostream>
