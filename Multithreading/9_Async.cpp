@@ -1,4 +1,3 @@
-/*
 TOPIC: async
 NOTES:
 1. It runs a function asynchronously (potentially in a new thread) and returns a std::future that
@@ -12,7 +11,7 @@ HOW IT WORKS:
 2. Then passes the promise object to thread function and returns the associated future object.
 3. When our passed argument function exits then its value will be set in this promise object, 
    so eventually return value will be available in future object.
-*/
+
 
 #include <iostream>
 #include <thread>
