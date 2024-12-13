@@ -11,8 +11,8 @@ using namespace std;
 int main(){
     OnlineShoppingService* zohoShoppingService = OnlineShoppingService::getInstance();
 
-    User* user1 = new User("1", "Nithish", "digitalnithish2003@gamil.com", "8754685518", "xxxx");
-    User* user2 = new User("2", "Balaji", "nithishbalaji2812@gamil.com", "8754685519", "yyyy");
+    User* user1 = new User("1", "Nithish", "digit@gamil.com", "8755525258", "xxxx");
+    User* user2 = new User("2", "Balaji", "nithi@gamil.com", "87556699", "yyyy");
 
     zohoShoppingService->registerUser(user1);
     zohoShoppingService->registerUser(user2);
