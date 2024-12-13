@@ -45,7 +45,7 @@ int main(){
     ticketBookingSystem->addShow(show1);
     ticketBookingSystem->addShow(show2);
 
-    User* user = new User(1, "NITHISH", "digitalnithish2003@gamil.com", "8754685518");
+    User* user = new User(1, "NITHISH", "digital@gamil.com", "875596218");
     vector<Seats*> seats = {show1->getSeats().at("1-5"), show1->getSeats().at("1-6")};
     Booking* booking= ticketBookingSystem->bookTicket(user, show1, seats);    
     if(booking != nullptr){
