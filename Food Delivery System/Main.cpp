@@ -11,8 +11,8 @@ using namespace std;
 
 int main(){
     OnlineFoodDeliverySystem* foodDeliverySystem = OnlineFoodDeliverySystem::getInstance();
-    Customer* customer1 = new Customer("1", "Nithish", "digitalnithish2003@gamil.com", "8754685518");
-    Customer* customer2 = new Customer("2", "Balaji", "nithishbalaji2812@gmail.com", "9952418344");
+    Customer* customer1 = new Customer("1", "Nithish", "xxxxxxxx@gamil.com", "6516156");
+    Customer* customer2 = new Customer("2", "Balaji", "nithishbal2@gmail.com", "6152895");
 
     foodDeliverySystem->registerCustomers(customer1->getCustomerId(), customer1);
     foodDeliverySystem->registerCustomers(customer2->getCustomerId(), customer2);
@@ -23,8 +23,8 @@ int main(){
     foodDeliverySystem->registerRestaurants(restaurant1->getRestaurantId(), restaurant1);
     foodDeliverySystem->registerRestaurants(restaurant2->getRestaurantId(), restaurant2);
 
-    DeliveryAgent* agent1 = new DeliveryAgent("1", "Sri Ganesh", "sriganesh.768@gamil.com", "1234569870", true);
-    DeliveryAgent* agent2 = new DeliveryAgent("2", "Mani", "mani.768@gamil.com", "9703485612", true);
+    DeliveryAgent* agent1 = new DeliveryAgent("1", "Sri Ganesh", "sriganesh@gamil.com", "1234569870", true);
+    DeliveryAgent* agent2 = new DeliveryAgent("2", "Mani", "mani.768@gamil.com", "9705612", true);
 
     foodDeliverySystem->registerDeliveryAgents(agent1->getDeliveryAgentId(), agent1);
     foodDeliverySystem->registerDeliveryAgents(agent2->getDeliveryAgentId(), agent2);
