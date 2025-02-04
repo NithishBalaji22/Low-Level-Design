@@ -3,11 +3,15 @@ Mutex:
 2. Its got two states 
     a. Locked
     b. Unlocked
-3. Its a locking machism lets take an example of Producer and Consumer problem the producer and the consumer thread both will try to access the buffer at the same time but to maintain the synchronisation we use conditional variable and making some sort of restrictrion 
+3. Its a locking machism lets take an example of Producer and Consumer problem the producer and the consumer thread both will try to access the buffer 
+at the same time but to maintain the synchronisation we use conditional variable and making some sort of restrictrion 
 4. Mutex is primarily used of mutual exclusion 
 
 Semaphore:
 1. Semaphore allows collection of threads into the critical section as the resource is divided into multiple sections
 2. Here the state is Integer (Count)
-3. Its Signalling Mechanism lets again take the example of Producer and Consumer problem here we signal the consumer about that i have produced the X in the buffer (Producer) now you can starts to consume the buffer and after the consumer consumed the buffer it signals the producer that hey i have consumed and you can start to produce it 
-4. They dont have single resource they have pool of resource for example they could have 4 buffers. Then the count could have the value of 4. Every time a thread (Semaphore) goes into the resource the count get decremented and incremented when they finish the task.
+3. Its Signalling Mechanism lets again take the example of Producer and Consumer problem here we signal the consumer about that i have produced the X in the
+buffer (Producer) now you can starts to consume the buffer and after the consumer consumed the buffer it signals the producer that hey i have consumed and you
+can start to produce it.
+4. They dont have single resource they have pool of resource for example they could have 4 buffers. Then the count could have the value of 4. Every time a thread 
+(Semaphore) goes into the resource the count get decremented and incremented when they finish the task.
